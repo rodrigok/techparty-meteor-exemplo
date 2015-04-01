@@ -2,7 +2,7 @@ Meteor.subscribe('cart');
 
 Template.cart.helpers({
 	cart: function () {
-		return Cart.find();
+		return Cart.find({userId: this.userId});
 	},
 	totalPrice: function() {
 		var total = 0;
@@ -12,7 +12,7 @@ Template.cart.helpers({
 		return total;
 	},
 	totalQuantity: function() {
-		return Cart.find().count();
+		return Cart.find({userId: this.userId}).count();
 	}
 });
 
