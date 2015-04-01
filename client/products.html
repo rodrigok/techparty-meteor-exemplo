@@ -1,0 +1,32 @@
+<template name="products">
+	<h2>Produtos</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>
+					Produto
+				</th>
+				<th>
+					Quantidade
+				</th>
+				<th>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each products}}
+			<tr>
+				<td>
+					{{title}} <span class="text-muted">({{formatNumber price style="currency" currency="BRL"}})</span>
+				</td>
+				<td>
+					<input type="number" name="quantity" class="form-control" value="1">
+				</td>
+				<td>
+					<button class="btn btn-primary">comprar</button>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</template>

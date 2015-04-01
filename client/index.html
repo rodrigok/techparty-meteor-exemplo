@@ -1,0 +1,22 @@
+<head>
+  <title>meteor-example</title>
+</head>
+
+<body>
+	<br>
+	<div class="container">
+		{{> loginButtons}}
+	</div>
+
+	<div class="container">
+		{{#if currentUser}}
+			<div class="col-md-6">
+				{{> products}}
+			</div>
+			<div class="col-md-6">
+				{{> cart}}
+			</div>
+		{{/if}}
+	</div>
+</body>
+

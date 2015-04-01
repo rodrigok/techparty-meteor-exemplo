@@ -1,0 +1,12 @@
+<template name="cart">
+	<h2>Carrinho</h2>
+	<div class="jumbotron">
+		{{#each cart}}
+			<div>
+				{{productTitle}} <span class="text-muted">({{formatNumber price style="currency" currency="BRL"}})</span> x {{quantity}} <button class="btn btn-xs btn-danger">remover</button>
+			</div>
+			<hr>
+		{{/each}}
+		<strong>Total: </strong>{{formatNumber totalPrice style="currency" currency="BRL"}} - {{totalQuantity}} item(ns)
+	</div>
+</template>
